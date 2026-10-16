@@ -23,7 +23,7 @@ export function createMainWindow(): BrowserWindow {
     minWidth: 800,
     minHeight: 600,
     webPreferences: {
-      preload: path.join(import.meta.dirname, "../preload/index.cjs"),
+      preload: path.join(__dirname, "../preload/index.js"),
       contextIsolation: true,
       nodeIntegration: false,
       sandbox: false,
@@ -32,7 +32,7 @@ export function createMainWindow(): BrowserWindow {
 
   // Load renderer
   if (app.isPackaged) {
-    win.loadFile(path.join(__dirname, "../renderer/index.html"));
+    win.loadFile(path.join(__dirname, "../../renderer/index.html"));
   } else {
     win.loadURL("http://localhost:5173");
   }

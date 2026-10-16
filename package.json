@@ -5,7 +5,7 @@
   "productName": "Ashan.ai",
   "license": "MIT",
   "type": "module",
-  "main": "dist/main/main.js",
+  "main": "dist/main/index.js",
   "scripts": {
     "dev": "electron . --no-sandbox",
     "build": "tsc && vite build",
@@ -48,5 +48,9 @@
     "electron",
     "ai-agent",
     "reverse-engineering"
-  ]
+  ],
+  "allowScripts": {
+    "electron@32.3.3": true,
+    "esbuild@0.21.5": true
+  }
 }

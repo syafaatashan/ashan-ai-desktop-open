@@ -11,13 +11,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "moduleResolution": "bundler",
-    "noEmit": true,
+    "outDir": "./dist",
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
     }
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src/main/**/*", "src/preload/**/*", "src/shared/**/*"],
+  "exclude": ["src/renderer/**/*"]
 }
